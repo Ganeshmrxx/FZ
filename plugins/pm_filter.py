@@ -118,16 +118,16 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         search, files, offset, total_results = pmspoll
     pre = 'pmfilep' if PROTECT_CONTENT else 'pmfile'
     if SINGLE_BUTTON:
-        btn = [[InlineKeyboardButton(text=f"Join", url=f'https://t.me/fzfilmyzilla')]]
+        btn = [[InlineKeyboardButton(text=f"Join", url='https://t.me/fzfilmyzilla')]]
     else:
-        btn = [[InlineKeyboardButton(text=f"Join", url=f'https://t.me/fzfilmyzilla')]]            
+        btn = [[InlineKeyboardButton(text=f"Join", url='https://t.me/fzfilmyzilla')]]            
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         PM_BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
-        btn = [[InlineKeyboardButton(text=f"Join", url=f'https://t.me/fzfilmyzilla')]]
+        btn = [[InlineKeyboardButton(text=f"Join", url='https://t.me/fzfilmyzilla')]]
     else:
-        btn = [[InlineKeyboardButton(text=f"Join", url=f'https://t.me/fzfilmyzilla')]]
+        btn = [[InlineKeyboardButton(text=f"Join", url='https://t.me/fzfilmyzilla')]]
     if PM_IMDB.lower() in ["true", "yes", "1", "enable", "y"]:
         imdb = await get_poster(search)
     else:
