@@ -204,7 +204,7 @@ async def pm_spoll_choker(msg):
         await k.delete()
         return
     PM_SPELL_CHECK[msg.id] = movielist
-    btn = [[InlineKeyboardButton(text="JoinUs", url=f"https://t.me/fzFilmyZilla]
+    btn = [[InlineKeyboardButton(text="JoinUs", url="https://t.me/fzFilmyZilla]
     #btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
     await msg.reply("For Movie Join Group?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
