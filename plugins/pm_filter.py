@@ -16,6 +16,7 @@ logger.setLevel(logging.ERROR)
 PM_BUTTONS = {}
 PM_SPELL_CHECK = {}
 
+"""
 @Client.on_callback_query(filters.create(lambda _, __, query: query.data.startswith("pmnext"))) 
 async def pm_next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -240,3 +241,4 @@ async def pm_spoll_choker(msg):
     #btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
     await msg.reply("For Movie Join Group?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
+"""
