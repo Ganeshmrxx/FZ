@@ -46,7 +46,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'fz')
 
 #maximum search result buttos count in number#
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
-START_MESSAGE = environ.get('START_MESSAGE', '👋 𝙷𝙴𝙻𝙾 {user} \nIm MsX Gannu ki gf \nhow are you i know you are good and you are getting bored\nBut don\'t worry just Join my group nd tell me there what you want to see? \n/nI will be very happy to see you there thank you ')
+START_MESSAGE = environ.get('START_MESSAGE', '👋 𝙷𝙴𝙻𝙾 {user} \nIm MsX Gannu ki gf \nhow are you i know you are good and you are getting bored\nBut don\'t worry just Join my group nd tell me there what you want to see? \nI will be very happy to see you there thank you ')
 BUTTON_LOCK_TEXT = environ.get("BUTTON_LOCK_TEXT", "⚠️ 𝙃𝙚𝙮 {query}! 𝙏𝙝𝙖𝙩'𝙨 𝙉𝙤𝙩 𝙁𝙤𝙧 𝙔𝙤𝙪. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙊𝙬𝙣")
 FORCE_SUB_TEXT = environ.get('FORCE_SUB_TEXT', 'Join Our Channel to get movies\nif you already joined just visit again and comeback\nthen press Already joined\nThankyou')
 RemoveBG_API = environ.get("RemoveBG_API", "")
