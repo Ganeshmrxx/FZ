@@ -134,7 +134,39 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         imdb = None
     TEMPLATE = IMDB_TEMPLATE
     if imdb:
-        cap = "Join us"
+        cap = TEMPLATE.format(
+            group = message.chat.title,
+            requested = message.from_user.mention,
+            query = search,
+            title = imdb['title'],
+            votes = imdb['votes'],
+            aka = imdb["aka"],
+            seasons = imdb["seasons"],
+            box_office = imdb['box_office'],
+            localized_title = imdb['localized_title'],
+            kind = imdb['kind'],
+            imdb_id = imdb["imdb_id"],
+            cast = imdb["cast"],
+            runtime = imdb["runtime"],
+            countries = imdb["countries"],
+            certificates = imdb["certificates"],
+            languages = imdb["languages"],
+            director = imdb["director"],
+            writer = imdb["writer"],
+            producer = imdb["producer"],
+            composer = imdb["composer"],
+            cinematographer = imdb["cinematographer"],
+            music_team = imdb["music_team"],
+            distributors = imdb["distributors"],
+            release_date = imdb['release_date'],
+            year = imdb['year'],
+            genres = imdb['genres'],
+            poster = imdb['poster'],
+            plot = imdb['plot'],
+            rating = imdb['rating'],
+            url = imdb['url'],
+            **locals()
+        )
     else:
         cap = f"Join for  {search}"
     if imdb and imdb.get('poster'):
@@ -170,7 +202,7 @@ async def pm_spoll_choker(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("JOin Group")
+        k = await msg.reply("Join Group")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -204,7 +236,7 @@ async def pm_spoll_choker(msg):
         await k.delete()
         return
     PM_SPELL_CHECK[msg.id] = movielist
-    btn = [[InlineKeyboardButton(text="JoinUs", url="https://t.me/fzFilmyZilla")]]
+    btn = [[InlineKeyboardButton(text="Join", url="https://t.me/fzFilmyZilla")]]
     #btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
     await msg.reply("For Movie Join Group?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
